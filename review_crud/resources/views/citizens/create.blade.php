@@ -33,17 +33,32 @@
 </div>
 
 <div class="d-sm-flex align-items-sm-center justify-content-sm-between pt-1">
-    <p>Please select your gender:</p>
-    <input type="radio" id="male" name="citizen_gender" value="male" >
-    <label for="male">Male</label><br>
-    <input type="radio" id="female" name="citizen_gender" value="female">
-    <label for="female">Female</label><br>
-    <div class="form-group"> <label class="text-muted mandatory">gender </label> <input type="text" name="citizen_gender" class="form-control" value="{{old('citizen_gender')}}">  @error("citizen_gender")
+    <div class="form-group">
+    <label  class="text-muted" for="citizen_gender">Choose a gender:</label>
+    <select class="text-muted" name="citizen_gender" id="citizen_gender">
+      <option  class="form-control text-muted" value=""  >gender</option>
+      <option  class="form-control text-muted" value="Male" @if(old('citizen_gender') == "Male") selected @endif >Male</option>
+      <option class="form-control text-muted" value="Female" @if(old('citizen_gender') == "Female") selected @endif >Female</option>
+    </select>
+    @error("citizen_gender")
+    <p style="color:red;font-size: 1rem ;">{{$message}}</p>
+    @enderror
+    </div>
+    <div class="form-group">
+        <label class="text-muted" for="citizen_city">Choose a city:</label>
+        <select class="text-muted" name="citizen_city" id="citizen_city">
+          <option  class="form-control text-muted" value="" >city</option>
+          <option  class="form-control text-muted" value="Amman" @if(old('citizen_city') == "Amman") selected @endif >Amman</option>
+          <option class="form-control text-muted" value="Irbid" @if(old('citizen_city') == "Irbid") selected @endif >Irbid</option>
+          <option class="form-control text-muted" value="Salt" @if(old('citizen_city') == "Salt") selected @endif >Salt</option>
+        </select>
+        @error("citizen_city")
         <p style="color:red;font-size: 1rem ;">{{$message}}</p>
-        @enderror</div>
-    <div class="form-group"> <label class="text-muted">city</label><input type="text" name="citizen_city" class="form-control" value="{{old('citizen_city')}}">@error("citizen_city")
-        <p style="color:red;font-size: 1rem ;">{{$message}}</p>
-        @enderror </div>
+        @enderror
+    </div>
+</div>
+<div class="d-sm-flex align-items-sm-center justify-content-sm-between pt-1">
+
 </div>
 <div class="form-group"> <label class="text-muted mandatory">National ID</label> <input name="citizen_nid" type="text"  class="form-control" value="{{old('citizen_nid')}}">@error("citizen_nid")
     <p style="color:red;font-size: 1rem ;">{{$message}}</p>

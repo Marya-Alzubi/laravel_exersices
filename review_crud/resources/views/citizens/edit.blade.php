@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="{{URL::asset('css/citizens')}}" >
+    <link rel="stylesheet" href="{{URL::asset('css/citizens.css')}}" >
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
@@ -39,12 +39,27 @@
             </div>
 
             <div class="d-sm-flex align-items-sm-center justify-content-sm-between pt-1">
-                <div class="form-group"> <label class="text-muted mandatory">gender </label> <input type="text" name="citizen_gender" class="form-control" value="{{$citizen->citizen_gender}}">  @error("citizen_gender")
+                <div class="form-group">
+                    <label class="text-muted" for="citizen_gender">Choose a gender:</label>
+                    <select class="text-muted" name="citizen_gender" id="citizen_gender">
+                      <option  class="form-control text-muted" value="Male" @if($citizen->citizen_gender == "Male") selected @endif >Male</option>
+                      <option class="form-control text-muted" value="Female" @if($citizen->citizen_gender == "Female") selected @endif >Female</option>
+                    </select>
+                    @error("citizen_gender")
                     <p style="color:red;font-size: 1rem ;">{{$message}}</p>
-                    @enderror</div>
-                <div class="form-group"> <label class="text-muted">city</label> <input type="text" name="citizen_city" class="form-control" value="{{$citizen->citizen_city}}">@error("citizen_city")
+                    @enderror
+                    </div>
+                <div class="form-group"> <label class="text-muted" for="citizen_city">Choose a city:</label>
+                    <select class="text-muted" name="citizen_city" id="citizen_city">
+                      <option  class="form-control text-muted" value="" >city</option>
+                      <option  class="form-control text-muted" value="Amman" @if($citizen->citizen_city == "Amman") selected @endif >Amman</option>
+                      <option class="form-control text-muted" value="Irbid" @if($citizen->citizen_city == "Irbid") selected @endif >Irbid</option>
+                      <option class="form-control text-muted" value="Salt" @if($citizen->citizen_city == "Salt") selected @endif >Salt</option>
+                    </select>
+                    @error("citizen_city")
                     <p style="color:red;font-size: 1rem ;">{{$message}}</p>
-                    @enderror </div>
+                    @enderror
+                </div>
             </div>
 
 

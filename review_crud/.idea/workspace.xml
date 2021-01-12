@@ -111,7 +111,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../project5/oca_projects_project5_laravel/laravel_project5_services" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex_registration_crud_with_database" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -119,6 +119,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -148,6 +149,7 @@
       <workItem from="1610444592222" duration="3214000" />
       <workItem from="1610447938893" duration="242000" />
       <workItem from="1610448501873" duration="5373000" />
+      <workItem from="1610457265679" duration="7157000" />
     </task>
     <servers />
   </component>
