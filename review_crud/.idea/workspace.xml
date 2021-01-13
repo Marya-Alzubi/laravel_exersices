@@ -111,7 +111,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex_registration_crud_with_database" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MasterPiece" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -150,6 +150,7 @@
       <workItem from="1610447938893" duration="242000" />
       <workItem from="1610448501873" duration="5373000" />
       <workItem from="1610457265679" duration="7157000" />
+      <workItem from="1610490252189" duration="632000" />
     </task>
     <servers />
   </component>

@@ -28,9 +28,10 @@
         {{--    <div class="h5 font-weight-bold">Registration</div>--}}
         {{--    <div class="text-muted">Enter your registration details</div>--}}
         <form method="post" action="/citizens/{{$citizen->citizen_id}}">
+            @CSRF
             <input type="hidden" name="_method" value="PUT">
 {{--            @method(PUT)--}}
-            @CSRF
+
             <div class=" align-items-sm-center justify-content-sm-between pt-1">
                 <div class="form-group"> <label class="text-muted mandatory">full name</label> <input type="text" name="citizen_fname"  class="form-control" value="{{$citizen->citizen_fname}}">@error("citizen_fname")
                     <p style="color:red;font-size: 1rem ;">{{$message}}</p>
